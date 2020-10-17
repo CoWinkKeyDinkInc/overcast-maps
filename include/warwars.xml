@@ -1,0 +1,34 @@
+<map>
+<version>150</version>
+<objective>Leak lava from the enemy's obsidian core into the void.</objective>
+<authors>
+    <author>Onsole</author>
+</authors>
+<mobs>
+    <filter>
+        <spawn>spawner</spawn>
+    </filter>
+</mobs>
+<regions>
+    <negative name="outside"><rectangle name="playable" min="-10,16" max="56,45" /></negative>
+    <apply block="deny-all" message="Can't touch this">
+        <cuboid min="23,50,29" max="25,51,30"/>
+    </apply>
+</regions>
+<rules>
+    <rule>No building at spawn</rule>
+    <rule>No fighting at spawn</rule>
+    <rule>No using a bucket on lava</rule>
+    <rule>No damaging your own core</rule>
+</rules>
+<blitz>
+    <title>War Wars</title>
+    <time>3m</time>
+    <lives>1</lives>
+</blitz>
+<portals>
+    <portal y="-15000">
+        <region name="outside"/>
+    </portal>
+</portals>
+</map>
